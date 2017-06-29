@@ -1,0 +1,124 @@
+/* Header */
+
+.marca {
+	height: 115px;
+}
+
+.header {
+	padding-top: 15px;
+	background-color: #774F38;
+}
+
+.texto-header {
+	color: #FFFFFF;
+}
+
+/* Menu */
+
+.menu {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	background-color: #C5E0DC;
+	font-weight: bold;
+}
+
+.botao-menu {
+	width: 100%;
+	height: 100%;
+	background-color: #C5E0DC;
+}
+
+/* Slider */
+
+/*Arruma o tamanho da imagem */
+.carousel-inner > .item > img {
+    margin: auto;
+    height: 200px;
+}
+
+/* Corpo da página Index  */
+
+.introducao {
+	padding-top: 30px;
+}
+
+.infos {
+	padding-top: 30px;
+}
+
+.well {
+	background: #F1D4AF;
+}
+.carrossel {
+
+}
+
+/* Produtos */
+
+.badge {
+	background: #774F38;
+}
+
+.btn-carrinho {
+	background: #C5E0DC;
+}
+
+.btn-cadastro {
+	background: #F38B6E;
+}
+
+.btn-entrar {
+	background: #F38B6E;
+}
+
+.imagem-produto > img {
+	margin: auto;
+	height: 200px;
+	border-radius: 25px;
+/*	border: solid;
+	border-width: 2px;
+	border-color: #E08E79; */
+}
+
+.corpo-produtos {
+	padding-top: 10px;
+}
+
+.lista-produtos {
+	background: #ECE5CE;
+}
+
+.list-group-item {
+	background: #ECE5CE;
+	border-color: #ECE5CE;
+}
+
+.qtd {
+	background: #C5E0DC;
+}
+
+.quantidade {
+	background-color: #ECE5CE;
+}
+
+
+/* Styling de tags */
+
+body {
+	width: 100%;
+	font-family: "R", Arial;
+	background-color: #E08E79;
+}
+
+p {
+	color: black;
+}
+
+a {
+	color: inherit;
+}
+
+@font-face {
+	font-family: "R";
+	src: url(rtraleway-regular-webfont.woff2);
+}

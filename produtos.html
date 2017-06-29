@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Produtos</title>
+		<meta charset="utf-8">
+
+		<!-- Links do Bootstrap e JQuery -->
+			<!-- Latest compiled and minified CSS -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+			<!-- Optional theme -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+			<!-- JQuery -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+		<!-- Chama o compra.js -->
+		<script type="text/javascript" src="compra.js"></script>
+
+		<!-- Chama o cadastro.js -->
+		<script type="text/javascript" src="cadastro.js"></script>
+
+	</head>
+	<body>
+		<div class="container-fluid">
+			<!-- Header -->
+			<div class="row header">
+				<div class="col-md-12 text-center">
+					<span class="imagem-header"><img src="Recursos/marca.png" class="marca"></span>
+					<span class="texto-header"><br><br><h3> - Livre de trigo, lactose e refinados - </h3></span>
+				</div>
+			</div>
+			<!-- Menu principal -->
+			<div class="row menu">
+				<div  class="col-md-3 text-center">
+					<a href="index.html"><button class="btn botao-menu"><h4><b>Bake</b></h4></button></a>
+				</div>
+				<div  class="col-md-3 text-center">
+					<a href="produtos.html"><button class="btn botao-menu"><h4><b>Produtos</b></h4></button></a>
+				</div>
+				<div  class="col-md-3 text-center">
+					<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
+				</div>
+				<div  class="col-md-3 text-center">
+					<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i></a>		<a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
+				</div>
+			</div>
+			<!-- Divisão produtos e carrinho -->
+			<div class="row corpo-produtos">
+				<!-- Area dos produtos -->
+				<div class="col-md-8 produtos text-center">
+					<!-- Primeira linha -->
+					<div class="row linha-um">
+						<div class="col-md-6">
+							<div class="well imagem-produto">
+								<div class="row">
+									<div class="col-md-12 text-center nome-produto"><h4><b>Cookie de cacau belga</b></h4></div>
+									<div class="col-md-12 imagem-produto"><img src="Recursos/biscoito.jpg"></div>
+									<div class="col-md-12"><p><br> Cookie feito com cacau belga recheado com creme de amendoim.</p></div>
+									<div class="col-md-12"><p>17R$ (04 unidades)</p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addCookie(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="cookie">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addCookie(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="well imagem-produto">
+								<div class="row">
+									<div class="col-md-12 text-center nome-produto"><h4><b>Brownie 60% cacau</b></h4></div>
+									<div class="col-md-12 imagem-produto"><img src="Recursos/brownie.jpg"></div>
+									<div class="col-md-12"><p><br>Brownie 60% cacau com avelãs. Sem trigo, sem lactose e 100% integral.</p></div>
+									<div class="col-md-12"><p>16R$/Unidade (230g)</p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addBrownie(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="brownie">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addBrownie(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Segunda linha -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="well imagem-produto">
+								<div class="row">
+									<div class="col-md-12 text-center nome-produto"><h4><b>Geleia caseira</b></h4></div>
+									<div class="col-md-12 imagem-produto"><img src="Recursos/geleia.jpg"></div>
+									<div class="col-md-12"><p><br> Geleia caseira de morangos orgânicos, cranberry e chia. Não leva açucar em sua produção.</p></div>
+									<div class="col-md-12"><p>18R$/Unidade (180ml)</p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addGeleia(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="geleia">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addGeleia(1);calcTotal()";><span class="glyphicon glyphicon-plus"></span></i></button></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="well imagem-produto">
+								<div class="row">
+									<div class="col-md-12 text-center nome-produto"><h4><b>Pastinha de manjericão</b></h4></div>
+									<div class="col-md-12 imagem-produto"><img src="Recursos/manjericao.jpg"></div>
+									<div class="col-md-12"><p><br> Pasta de manjericão feita a base de castanhas de caju, saborizada com manjericão e alho tostado.</p></div>
+									<div class="col-md-12"><p>18R$/Unidade (160ml)</p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addPastinha(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="pastinha">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addPastinha(1);calcTotal()";><span class="glyphicon glyphicon-plus"></span></i></button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Terceira linha -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="well imagem-produto">
+								<div class="row">
+									<div class="col-md-12 text-center nome-produto"><h4><b>Molho pesto</b></h4></div>
+									<div class="col-md-12 imagem-produto"><img src="Recursos/pesto.jpg"></div>
+									<div class="col-md-12"><p><br> Molho pesto feito com base de queijo de ovelha (Pecorino) e castanha do pará.</p></div>
+									<div class="col-md-12"><p>18R$/Unidade (180ml)</p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addMolho(0);calcTotal()";><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="molho">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addMolho(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="well imagem-produto">
+								<div class="row">
+									<div class="col-md-12 text-center nome-produto"><h4><b>Torta Brownie</b></h4></div>
+									<div class="col-md-12 imagem-produto"><img src="Recursos/tortab.jpg"></div>
+									<div class="col-md-12"><p><br> Base de brownie, com cobertura de mousse de chocolate 60% cacau, coberta com morangos e mirtilos orgânicos.</p></div>
+									<div class="col-md-12"><p>125R$/Unidade</p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addTorta(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="torta">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addTorta(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Area do carrinho -->
+				<div class="col-md-4 carrinho text-center">
+					<div class="well">
+						<div class="row">
+							<div id="minhaConta">
+								<div class="col-md-6"><button type="button" class="btn btn-cadastro" data-toggle="modal" data-target="#modCadastro">Cadastro</button></div>
+								<div class="col-md-6"><button type="button" class="btn btn-entrar" data-toggle="modal" data-target="#modEntrar">Entrar</button></div>
+							</div>
+							<div class="col-md-12 text-center"><p>_________________________________________</p></div>
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-12 coluna-produtos text-left">
+										<ul class="list-group lista-produtos">
+											<li class="list-group-item">Cookie de cacau belga <span class="badge badge-pill" id="pCookie">0R$</span></li>
+											<li class="list-group-item">Brownie 60% cacau <span class="badge badge-pill" id="pBrownie">0R$</span></li>
+											<li class="list-group-item">Geleia caseira <span class="badge badge-pill" id="pGeleia">0R$</span></li>
+											<li class="list-group-item">Pastinha de manjericão <span class="badge badge-pill" id="pPastinha">0R$</span></li>
+											<li class="list-group-item">Molho pesto <span class="badge badge-pill" id="pMolho">0R$</span></li>
+											<li class="list-group-item">Torta Brownie <span class="badge badge-pill" id="pTorta">0R$</span></li>
+											<li class="list-group-item">Total: <b><span class="total-produtos" id="total">0</span>R$</b></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<button type="button" class="btn btn-carrinho" data-toggle="modal" data-target="#modFinal">Finalizar pedido <i class="fa fa-shopping-cart"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Chama o modal do cadastro -->
+			<div id="modCadastro" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Conteudo do modal -->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h3 class="modal-title">Formulario de cadastro</h3>
+						</div>
+						<div class="modal-body">
+							<div class="container-fluid">
+								<form>
+									<div class="row">
+										<div class="form-group">
+											<label class="col-md-6" for="nome">Nome</label>
+											<label class="col-md-6" for="sobrenome">Sobrenome</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-md-6"><input type="text" class="form-control" id="nome" placeholder="Nome"></div>
+											<div class="col-md-6"><input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label class="col-md-12" for="email"><br>Email</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-md-12"><input type="email" class="form-control" id="email" placeholder="Email"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label class="col-md-6" for="cep"><br>CEP</label>
+											<label class="col-md-6" for="numero"><br>Numero</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-md-6"><input type="text" class="form-control" id="cep" placeholder="CEP do endereço de entrega"></div>
+											<div class="col-md-6"><input type="text" class="form-control" id="numero" placeholder="Numero da residencia"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label class="col-md-4" for="usuario"><br>Usuario</label>
+											<label class="col-md-8" for="prefer"><br>Forma preferida de contato:</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-md-4"><input type="text" class="form-control" id="usuario" placeholder="Usuario"></div>
+											<div class="col-md-2"><label><input type="radio">Email</label></div>
+											<div class="col-md-3"><label><input type="radio">Ligação</label></div>
+											<div class="col-md-3"><label><input type="radio">WhatsApp</label></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label class="col-md-6" for="senha1"><br>Senha</label>
+											<label class="col-md-6" for="senha2"><br>Confirme sua senha</label>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<div class="col-md-6"><input type="password" class="form-control" id="senha1" placeholder="Senha"></div>
+											<div class="col-md-6"><input type="password" class="form-control" id="senha2" placeholder="Digite novamente sua senha"></div>
+										</div> 
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal" onclick="getUsuario();">Cadastrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Chama o modal de login -->
+			<div id="modEntrar" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Conteudo do modal -->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h3 class="modal-title">Login</h3>
+						</div>
+						<div class="modal-body">
+							<div class="container-fluid">
+								<form class="form-horizontal">
+									<div class="row">
+										<div class="form-group">
+											<label class="control-label col-md-3" for="user">Usuario:</label>
+											<div class="col-md-9"><input type="text" class="form-control" id="user" placeholder="Usuario"></div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group">
+											<label class="control-label col-md-3" for="pwd">Senha:</label>
+											<div class="col-md-9"><input type="password" class="form-control" id="senha" placeholder="Senha"></div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal" onclick="getUser();">Entrar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Chama o modal de login -->
+			<div id="modFinal" class="modal fade" role="dialog">
+				<div class="modal-dialog">
+					<!-- Conteuodo do modal -->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h3 class="modal-title">Pedido realizado com sucesso!</h3>
+						</div>
+						<div class="modal-body">
+							<p class="modal-final">Entraremos em contato em breve para confirmar o pedido.</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
