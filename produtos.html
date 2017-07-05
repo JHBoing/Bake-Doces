@@ -30,7 +30,7 @@
 		<script type="text/javascript" src="cadastro.js"></script>
 
 	</head>
-	<body>
+	<body onload="carregaUsuario();carregaUser();carregaProdutos();">
 		<div class="container-fluid">
 			<!-- Header -->
 			<div class="row header">
@@ -50,7 +50,7 @@
 				<div  class="col-md-3 text-center">
 					<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
 				</div>
-				<div  class="col-md-3 text-center">
+				<div  class="col-md-3 text-center social">
 					<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i></a>		<a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
 				</div>
 			</div>
@@ -253,7 +253,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal" onclick="getUsuario();">Cadastrar</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal" onclick="getUsuarioStorage();">Cadastrar</button>
 						</div>
 					</div>
 				</div>
@@ -286,7 +286,7 @@
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-default" data-dismiss="modal" onclick="getUser();">Entrar</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal" onclick="getUserStorage();">Entrar</button>
 						</div>
 					</div>
 				</div>

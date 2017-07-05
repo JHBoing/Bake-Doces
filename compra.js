@@ -12,6 +12,39 @@ var torta = 0;
 var pTorta = 0;
 var total = 0;
 
+/* Carrega a quantidade e preço dos produtos quando a pagina é carregada */
+function carregaProdutos() {
+	if (localStorage.getItem("cookie") !== null) {
+		$("#cookie").html(localStorage.getItem("cookie"));
+		$("#pCookie").html(localStorage.getItem("pCookie") + "R$");
+	}
+
+	if (localStorage.getItem("brownie") !== null) {
+		$("#brownie").html(localStorage.getItem("brownie"));
+		$("#pBrownie").html(localStorage.getItem("pBrownie") + "R$");
+	}
+
+	if (localStorage.getItem("geleia") !== null) {
+		$("#geleia").html(localStorage.getItem("geleia"));
+		$("#pGeleia").html(localStorage.getItem("pGeleia") + "R$");
+	}
+
+	if (localStorage.getItem("pastinha") !== null) {
+		$("#pastinha").html(localStorage.getItem("pastinha"));
+		$("#pPastinha").html(localStorage.getItem("pPastinha") + "R$");
+	}
+
+	if (localStorage.getItem("molho") !== null) {
+		$("#molho").html(localStorage.getItem("molho"));
+		$("#pMolho").html(localStorage.getItem("pMolho") + "R$");
+	}
+
+	if (localStorage.getItem("torta") !== null) {
+		$("#torta").html(localStorage.getItem("torta"));
+		$("#pTorta").html(localStorage.getItem("pTorta") + "R$");
+	}
+}
+
 //Adiciona ou diminui o numero de cookies e calcula o valor dos cookies
 function addCookie(digito) {
 	if (digito == 1) {
@@ -25,8 +58,10 @@ function addCookie(digito) {
 		pCookie = cookie * 17;
 	}
 
-	document.getElementById("cookie").innerHTML = "" + cookie;
-	document.getElementById("pCookie").innerHTML = "" + pCookie + "R$";
+	localStorage.setItem("cookie", cookie);
+	localStorage.setItem("pCookie", pCookie);
+	$("#cookie").html(localStorage.getItem("cookie"));
+	$("#pCookie").html(localStorage.getItem("pCookie") + "R$");
 }
 
 //Adiciona ou diminui o numero de brownies e calcula o valor dos brownies
@@ -42,8 +77,10 @@ function addBrownie(digito) {
 		pBrownie = brownie * 17;
 	}
 
-	document.getElementById("brownie").innerHTML = "" + brownie;
-	document.getElementById("pBrownie").innerHTML = "" + pBrownie + "R$";
+	localStorage.setItem("brownie", brownie);
+	localStorage.setItem("pBrownie", pBrownie);
+	$("#brownie").html(localStorage.getItem("brownie"));
+	$("#pBrownie").html(localStorage.getItem("pBrownie") + "R$");
 }
 
 //Adiciona ou diminui o numero de geleias e calcula o valor das geleias
@@ -59,8 +96,10 @@ function addGeleia(digito) {
 		pGeleia = geleia * 18;
 	}
 
-	document.getElementById("geleia").innerHTML = "" + geleia;
-	document.getElementById("pGeleia").innerHTML = "" + pGeleia + "R$";
+	localStorage.setItem("geleia", geleia);
+	localStorage.setItem("pGeleia", pGeleia);
+	$("#geleia").html(localStorage.getItem("geleia"));
+	$("#pGeleia").html(localStorage.getItem("pGeleia") + "R$");
 }
 
 //Adiciona ou diminui o numero de pastinhas e calcula o valor das pastinhas
@@ -76,8 +115,10 @@ function addPastinha(digito) {
 		pPastinha = pastinha * 18;
 	}
 
-	document.getElementById("pastinha").innerHTML = "" + pastinha;
-	document.getElementById("pPastinha").innerHTML = "" + pPastinha + "R$";
+	localStorage.setItem("pastinha", pastinha);
+	localStorage.setItem("pPastinha", pPastinha);
+	$("#pastinha").html(localStorage.getItem("pastinha"));
+	$("#pPastinha").html(localStorage.getItem("pPastinha") + "R$");
 }
 
 //Adiciona ou diminui o numero de molhos e calcula o valor dos molhos
@@ -93,8 +134,10 @@ function addMolho(digito) {
 		pMolho = molho * 18;
 	}
 
-	document.getElementById("molho").innerHTML = "" + molho;
-	document.getElementById("pMolho").innerHTML = "" + pMolho + "R$";
+	localStorage.setItem("molho", molho);
+	localStorage.setItem("pMolho", pMolho);
+	$("#molho").html(localStorage.getItem("molho"));
+	$("#pMolho").html(localStorage.getItem("pMolho") + "R$");
 }
 
 //Adiciona ou diminui o numero de tortas e calcula o valor das tortas
@@ -110,8 +153,10 @@ function addTorta(digito) {
 		pTorta = torta * 18;
 	}
 
-	document.getElementById("torta").innerHTML = "" + torta;
-	document.getElementById("pTorta").innerHTML = "" + pTorta + "R$";
+	localStorage.setItem("torta", torta);
+	localStorage.setItem("pTorta", pTorta);
+	$("#torta").html(localStorage.getItem("torta"));
+	$("#pTorta").html(localStorage.getItem("pTorta") + "R$");
 }
 
 //Calcula o valor total do pedido

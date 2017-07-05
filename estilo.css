@@ -28,6 +28,10 @@
 	background-color: #C5E0DC;
 }
 
+.social {
+	padding-top: 10px;
+}
+
 /* Slider */
 
 /*Arruma o tamanho da imagem */
@@ -36,7 +40,7 @@
     height: 200px;
 }
 
-/* Corpo da página Index  */
+/* Index  */
 
 .introducao {
 	padding-top: 30px;
@@ -49,8 +53,14 @@
 .well {
 	background: #F1D4AF;
 }
-.carrossel {
+.carousel {
+	width: 98%;
+}
 
+/* Contato */
+
+.formulario {
+	padding-top: 10px;
 }
 
 /* Produtos */
@@ -75,9 +85,6 @@
 	margin: auto;
 	height: 200px;
 	border-radius: 25px;
-/*	border: solid;
-	border-width: 2px;
-	border-color: #E08E79; */
 }
 
 .corpo-produtos {
@@ -99,6 +106,14 @@
 
 .quantidade {
 	background-color: #ECE5CE;
+	border-radius: 25px;
+}
+
+@media only screen and (min-width: 1224px) {
+	.carrinho {
+		position: fixed;
+		margin-left: 67%;
+	}
 }
 
 
