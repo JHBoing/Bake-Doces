@@ -19,7 +19,6 @@
 	padding-top: 15px;
 	padding-bottom: 10px;
 	background-color: #C5E0DC;
-	font-weight: bold;
 }
 
 .botao-menu {
@@ -60,7 +59,7 @@
 /* Contato */
 
 .formulario {
-	padding-top: 10px;
+	padding-top: 30px;
 }
 
 /* Produtos */
@@ -88,7 +87,7 @@
 }
 
 .corpo-produtos {
-	padding-top: 10px;
+	padding-top: 30px;
 }
 
 .lista-produtos {
@@ -107,6 +106,14 @@
 .quantidade {
 	background-color: #ECE5CE;
 	border-radius: 25px;
+}
+
+.modal-f, .modal-h {
+	background: #E08E79;
+}
+
+.modal-b {
+	background: #F1D4AF;
 }
 
 @media only screen and (min-width: 1224px) {
@@ -136,4 +143,8 @@ a {
 @font-face {
 	font-family: "R";
 	src: url(rtraleway-regular-webfont.woff2);
+}
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+	background-color: #ECE5CE;
 }

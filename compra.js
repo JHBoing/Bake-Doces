@@ -15,34 +15,46 @@ var total = 0;
 /* Carrega a quantidade e preço dos produtos quando a pagina é carregada */
 function carregaProdutos() {
 	if (localStorage.getItem("cookie") !== null) {
-		$("#cookie").html(localStorage.getItem("cookie"));
-		$("#pCookie").html(localStorage.getItem("pCookie") + "R$");
+		$("#cookie").text(localStorage.getItem("cookie"));
+		$("#pCookie").text(localStorage.getItem("pCookie") + "R$");
+		cookie = parseInt(localStorage.getItem("cookie"));
 	}
 
 	if (localStorage.getItem("brownie") !== null) {
 		$("#brownie").html(localStorage.getItem("brownie"));
 		$("#pBrownie").html(localStorage.getItem("pBrownie") + "R$");
+		brownie = parseInt(localStorage.getItem("brownie"));
 	}
 
 	if (localStorage.getItem("geleia") !== null) {
 		$("#geleia").html(localStorage.getItem("geleia"));
 		$("#pGeleia").html(localStorage.getItem("pGeleia") + "R$");
+		geleia = parseInt(localStorage.getItem("geleia"));
 	}
 
 	if (localStorage.getItem("pastinha") !== null) {
 		$("#pastinha").html(localStorage.getItem("pastinha"));
 		$("#pPastinha").html(localStorage.getItem("pPastinha") + "R$");
+		pastinha = parseInt(localStorage.getItem("pastinha"));
 	}
 
 	if (localStorage.getItem("molho") !== null) {
 		$("#molho").html(localStorage.getItem("molho"));
 		$("#pMolho").html(localStorage.getItem("pMolho") + "R$");
+		molho = parseInt(localStorage.getItem("molho"));
 	}
 
 	if (localStorage.getItem("torta") !== null) {
 		$("#torta").html(localStorage.getItem("torta"));
 		$("#pTorta").html(localStorage.getItem("pTorta") + "R$");
+		torta = parseInt(localStorage.getItem("torta"));
 	}
+
+	if (localStorage.getItem("total") !== null) {
+		$("#total").html(localStorage.getItem("total"));
+		total = localStorage.getItem("total");
+	}
+
 }
 
 //Adiciona ou diminui o numero de cookies e calcula o valor dos cookies
@@ -50,10 +62,10 @@ function addCookie(digito) {
 	if (digito == 1) {
 		cookie = cookie + 1;
 		pCookie = cookie * 17;
-	} else if (digito != 1 && cookie == 0) {
+	} else if (digito == 0 && cookie == 0) {
 		cookie = cookie;
 		pCookie = pCookie;
-	} else {
+	} else if (digito == 0 ) {
 		cookie = cookie - 1;
 		pCookie = cookie * 17;
 	}
@@ -162,5 +174,45 @@ function addTorta(digito) {
 //Calcula o valor total do pedido
 function calcTotal(){
 	total = pCookie + pBrownie + pTorta + pMolho + pPastinha + pGeleia;
-	document.getElementById("total").innerHTML = "" + total;
+	localStorage.setItem("total", total);
+	$("#total").html(localStorage.getItem("total"));
+}
+
+//Carrega o pedido no modal
+
+function conteudoFinal() {
+	//Carrega os preços
+	if (localStorage.getItem("cookie") !== null) {
+		document.getElementById("pCookieF").innerHTML = localStorage.getItem("pCookie") + "R$";
+	}
+
+	if (localStorage.getItem("brownie") !== null) {
+		document.getElementById("pBrownieF").innerHTML = localStorage.getItem("pBrownie") + "R$";
+	}
+
+	if (localStorage.getItem("torta") !== null) {
+		document.getElementById("pTortaF").innerHTML = localStorage.getItem("pTorta") + "R$";
+	}
+	
+	if (localStorage.getItem("molho") !== null) {
+		document.getElementById("pMolhoF").innerHTML = localStorage.getItem("pMolho") + "R$";
+	}
+	
+	if (localStorage.getItem("pastinha") !== null) {
+		document.getElementById("pPastinhaF").innerHTML = localStorage.getItem("pPastinha") + "R$";
+	}
+
+	if (localStorage.getItem("geleia") !== null) {
+		document.getElementById("pGeleiaF").innerHTML = localStorage.getItem("pGeleia") + "R$";
+	}
+
+	//Carrega o total
+	if (localStorage.getItem("total") !== null) {
+		document.getElementById("totalF").innerHTML = localStorage.getItem("total");
+	}
+}
+
+function fechaModal() {
+	localStorage.clear();
+	location.reload();
 }
