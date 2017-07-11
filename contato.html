@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Contato</title>
+		<title>Bake Doces - Contato</title>
 		<meta charset="utf-8">
+		<meta name="description" content="Entre em contato com a Bake Doces. Seja para fazer uma crítica, sugestão, reclamação ou apenas mandar uma mensagem para nós.">
 
 		<!-- Links do Bootstrap e JQuery -->
 			<!-- Latest compiled and minified CSS -->
@@ -27,33 +28,35 @@
 	<body>
 		<div class="container-fluid">
 			<!-- Header -->
-			<div class="row header">
+			<div class="row header" role="banner">
 				<div class="col-md-12 text-center">
-					<span class="imagem-header"><img src="Recursos/marca.png" class="marca"></span>
+					<span class="imagem-header"><img src="Recursos/marca.png" class="marca" alt="Banner Bake Doces"></span>
 					<span class="texto-header"><br><br><h3> - Livre de trigo, lactose e refinados - </h3></span>
 				</div>
 			</div>
-			<!-- Menu principal -->
-			<div class="row menu">
-				<div  class="col-md-3 text-center">
-					<a href="index.html"><button class="btn botao-menu"><h4><b>Bake</b></h4></button></a>
+			<nav role="navigation">
+				<!-- Menu principal -->
+				<div class="row menu" role="menubar">
+					<div  class="col-md-3 text-center" role="menuitem">
+						<a href="index.html"><button class="btn botao-menu" aria-label="Pagina inicial"><h4><b>Bake</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center" role="menuitem">
+						<a href="produtos.html"><button class="btn botao-menu"><h4><b>Produtos</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center"role="menuitem">
+						<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center social" role="menuitem">
+						<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i>	</a><a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
+					</div>
 				</div>
-				<div  class="col-md-3 text-center">
-					<a href="produtos.html"><button class="btn botao-menu"><h4><b>Produtos</b></h4></button></a>
-				</div>
-				<div  class="col-md-3 text-center">
-					<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
-				</div>
-				<div  class="col-md-3 text-center social">
-					<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i></a>		<a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
-				</div>
-			</div>
+			</nav>
 		</div>
 		<div class="container">
 			<div class="formulario">
 				<!-- Formulario -->
 				<div class="well">
-					<form>
+					<form role="form">
 						<div class="form-group">
 							<label for="nome">Nome:</label>
 							<input type="text" class="form-control" id="nome" placeholder="Digite seu nome" name="nome">

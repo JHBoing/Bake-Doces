@@ -213,6 +213,6 @@ function conteudoFinal() {
 }
 
 function fechaModal() {
-//	localStorage.clear();
+	localStorage.clear();
 	location.reload();
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Produtos</title>
+		<title>Bake Doces - Produtos - Tortas - Brownies - Molhos - Geleias</title>
 		<meta charset="utf-8">
+		<meta name="description" content="Os produtos variam semanalmente. Buscamos trazer uma seleção diferenciada de produtos de grande qualidade e sabor. Toda semana uma variação diferente de Torta Brownie.">
 
 		<!-- Links do Bootstrap e JQuery -->
 			<!-- Latest compiled and minified CSS -->
@@ -33,29 +34,31 @@
 	<body onload="carregaUsuario();carregaUser();carregaProdutos();">
 		<div class="container-fluid">
 			<!-- Header -->
-			<div class="row header">
+			<div class="row header" role="banner">
 				<div class="col-md-12 text-center">
-					<span class="imagem-header"><img src="Recursos/marca.png" class="marca"></span>
+					<span class="imagem-header"><img src="Recursos/marca.png" class="marca" alt="Banner Bake Doces"></span>
 					<span class="texto-header"><br><br><h3> - Livre de trigo, lactose e refinados - </h3></span>
 				</div>
 			</div>
-			<!-- Menu principal -->
-			<div class="row menu">
-				<div  class="col-md-3 text-center">
-					<a href="index.html"><button class="btn botao-menu"><h4><b>Bake</b></h4></button></a>
+			<nav role="navigation">
+				<!-- Menu principal -->
+				<div class="row menu" role="menubar">
+					<div  class="col-md-3 text-center" role="menuitem">
+						<a href="index.html"><button class="btn botao-menu" aria-label="Pagina inicial"><h4><b>Bake</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center" role="menuitem">
+						<a href="produtos.html"><button class="btn botao-menu"><h4><b>Produtos</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center"role="menuitem">
+						<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center social" role="menuitem">
+						<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i>	</a><a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
+					</div>
 				</div>
-				<div  class="col-md-3 text-center">
-					<a href="produtos.html"><button class="btn botao-menu"><h4><b>Produtos</b></h4></button></a>
-				</div>
-				<div  class="col-md-3 text-center">
-					<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
-				</div>
-				<div  class="col-md-3 text-center social">
-					<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i></a>		<a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
-				</div>
-			</div>
+			</nav>
 			<!-- Divisão produtos e carrinho -->
-			<div class="row corpo-produtos">
+			<div class="row corpo-produtos" role="main">
 				<!-- Area dos produtos -->
 				<div class="col-md-8 produtos text-center">
 					<!-- Primeira linha -->
@@ -67,9 +70,9 @@
 									<div class="col-md-12 imagem-produto"><img src="Recursos/biscoito.jpg"></div>
 									<div class="col-md-12"><p><br> Cookie feito com cacau belga recheado com creme de amendoim.</p></div>
 									<div class="col-md-12"><p>17R$ (04 unidades)</p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addCookie(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
-									<div class="col-md-6 quantidade"><p><span id="cookie">0</span></p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addCookie(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addCookie(0);calcTotal();" aria-label="Retira o item do carrinho"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="cookie" aria-label="Quantidade de cookies">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addCookie(1);calcTotal();" aria-label="Adiciona o item ao carrinho"><span class="glyphicon glyphicon-plus"></span></i></button></div>
 								</div>
 							</div>
 						</div>
@@ -80,9 +83,9 @@
 									<div class="col-md-12 imagem-produto"><img src="Recursos/brownie.jpg"></div>
 									<div class="col-md-12"><p><br>Brownie 60% cacau com avelãs. Sem trigo, sem lactose e 100% integral.</p></div>
 									<div class="col-md-12"><p>16R$/Unidade (230g)</p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addBrownie(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
-									<div class="col-md-6 quantidade"><p><span id="brownie">0</span></p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addBrownie(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addBrownie(0);calcTotal();" aria-label="Retira o item do carrinho"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="brownie" aria-label="Quantidade de brownies">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addBrownie(1);calcTotal();" aria-label="Adiciona o item ao carrinho"><span class="glyphicon glyphicon-plus"></span></i></button></div>
 								</div>
 							</div>
 						</div>
@@ -96,9 +99,9 @@
 									<div class="col-md-12 imagem-produto"><img src="Recursos/geleia.jpg"></div>
 									<div class="col-md-12"><p><br> Geleia caseira de morangos orgânicos, cranberry e chia. Não leva açucar em sua produção.</p></div>
 									<div class="col-md-12"><p>18R$/Unidade (180ml)</p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addGeleia(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
-									<div class="col-md-6 quantidade"><p><span id="geleia">0</span></p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addGeleia(1);calcTotal()";><span class="glyphicon glyphicon-plus"></span></i></button></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addGeleia(0);calcTotal();" aria-label="Retira o item do carrinho"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="geleia" aria-label="Quantidade de geleias caseiras">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addGeleia(1);calcTotal()"; aria-label="Adiciona o item ao carrinho"><span class="glyphicon glyphicon-plus"></span></i></button></div>
 								</div>
 							</div>
 						</div>
@@ -109,9 +112,9 @@
 									<div class="col-md-12 imagem-produto"><img src="Recursos/manjericao.jpg"></div>
 									<div class="col-md-12"><p><br> Pasta de manjericão feita a base de castanhas de caju, saborizada com manjericão e alho tostado.</p></div>
 									<div class="col-md-12"><p>18R$/Unidade (160ml)</p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addPastinha(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
-									<div class="col-md-6 quantidade"><p><span id="pastinha">0</span></p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addPastinha(1);calcTotal()";><span class="glyphicon glyphicon-plus"></span></i></button></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addPastinha(0);calcTotal();" aria-label="Retira o item do carrinho"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="pastinha" aria-label="Quantidade de pastinhas de manjericão">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addPastinha(1);calcTotal()"; aria-label="Adiciona o item ao carrinho"><span class="glyphicon glyphicon-plus"></span></i></button></div>
 								</div>
 							</div>
 						</div>
@@ -125,9 +128,9 @@
 									<div class="col-md-12 imagem-produto"><img src="Recursos/pesto.jpg"></div>
 									<div class="col-md-12"><p><br> Molho pesto feito com base de queijo de ovelha (Pecorino) e castanha do pará.</p></div>
 									<div class="col-md-12"><p>18R$/Unidade (180ml)</p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addMolho(0);calcTotal()";><span class="glyphicon glyphicon-minus"></span></button></div>
-									<div class="col-md-6 quantidade"><p><span id="molho">0</span></p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addMolho(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addMolho(0);calcTotal()"; aria-label="Retira o item do carrinho"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="molho" aria-label="Quantidade de molhos pesto">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addMolho(1);calcTotal();" aria-label="Adiciona o item ao carrinho"><span class="glyphicon glyphicon-plus"></span></i></button></div>
 								</div>
 							</div>
 						</div>
@@ -138,9 +141,9 @@
 									<div class="col-md-12 imagem-produto"><img src="Recursos/tortab.jpg"></div>
 									<div class="col-md-12"><p><br> Base de brownie, com cobertura de mousse de chocolate 60% cacau, coberta com morangos e mirtilos orgânicos.</p></div>
 									<div class="col-md-12"><p>125R$/Unidade</p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addTorta(0);calcTotal();"><span class="glyphicon glyphicon-minus"></span></button></div>
-									<div class="col-md-6 quantidade"><p><span id="torta">0</span></p></div>
-									<div class="col-md-3"><button class="btn qtd" onclick="addTorta(1);calcTotal();"><span class="glyphicon glyphicon-plus"></span></i></button></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addTorta(0);calcTotal();" aria-label="Retira o item do carrinho"><span class="glyphicon glyphicon-minus"></span></button></div>
+									<div class="col-md-6 quantidade"><p><span id="torta" aria-label="Quantidade de tortas brownie">0</span></p></div>
+									<div class="col-md-3"><button class="btn qtd" onclick="addTorta(1);calcTotal();" aria-label="Adiciona o item ao carrinho"><span class="glyphicon glyphicon-plus"></span></i></button></div>
 								</div>
 							</div>
 						</div>

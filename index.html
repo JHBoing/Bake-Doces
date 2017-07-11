@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Bake</title>
+		<title>Bake Doces - Confeitaria</title>
 		<meta charset="utf-8">
-		
+		<meta name="description" content="A Bake Doces é uma confeitaria que trabalha com a produção de doces, molhos, geleias e outros. Nossos produtos são diferenciados, direcionados a pessoas que procuram produtos sem trigo, lactose e refinados.">
 		<!-- Links do Bootstrap e JQuery -->
 			<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -22,34 +22,35 @@
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-
-
 	</head>
 	<body>
 		<div class="container-fluid">
 			<!-- Header -->
-			<div class="row header">
+			<div class="row header" role="banner">
 				<div class="col-md-12 text-center">
-					<span class="imagem-header"><img src="Recursos/marca.png" class="marca"></span>
+					<span class="imagem-header"><img src="Recursos/marca.png" class="marca" alt="Banner Bake Doces"></span>
 					<span class="texto-header"><br><br><h3> - Livre de trigo, lactose e refinados - </h3></span>
 				</div>
 			</div>
-			<!-- Menu principal -->
-			<div class="row menu">
-				<div  class="col-md-3 text-center">
-					<a href="index.html"><button class="btn botao-menu"><h4><b>Bake</b></h4></button></a>
+			<nav role="navigation">
+				<!-- Menu principal -->
+				<div class="row menu" role="menubar">
+					<div  class="col-md-3 text-center" role="menuitem">
+						<a href="index.html"><button class="btn botao-menu" aria-label="Pagina inicial"><h4><b>Bake</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center" role="menuitem">
+						<a href="produtos.html"><button class="btn botao-menu"><h4><b>Produtos</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center" role="menuitem">
+						<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
+					</div>
+					<div  class="col-md-3 text-center social" role="menuitem">
+						<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i>	</a><a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
+					</div>
 				</div>
-				<div  class="col-md-3 text-center">
-					<a href="produtos.html"><button class="btn botao-menu"><h4><b>Produtos</b></h4></button></a>
-				</div>
-				<div  class="col-md-3 text-center">
-					<a href="contato.html"><button class="btn botao-menu"><h4><b>Contato</b></h4></button></a>
-				</div>
-				<div  class="col-md-3 text-center social">
-					<p><a href="https://www.facebook.com/bakedoces/"><i class="fa fa-facebook-square fa-2x"></i>	</a><a href="https://www.instagram.com/bakedoces/"><i class="fa fa-instagram fa-2x"></i></a></p>
-				</div>
-			</div>
-		<div class="container">
+			</nav>
+		</div>
+		<div class="container" role="main">
 			<!-- Texto e Localização -->
 			<div class="row">
 				<div class="col-md-6 introducao">
